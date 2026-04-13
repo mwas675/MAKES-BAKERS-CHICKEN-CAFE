@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUNCH & BREW — Coffee · Fried Chicken</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">Crunch&Brew</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">Story</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-order">Order Now</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">✦ Nairobi's Boldest Kitchen Since 2019 ✦</div>
+      <h1 class="hero-title">
+        CRUNCH
+        <span class="accent">&amp; BREW</span>
+      </h1>
+      <p class="hero-subtitle">Crispy Fried Chicken &nbsp;·&nbsp; Specialty Coffee &nbsp;·&nbsp; Pure Indulgence</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+          Explore Menu
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('chat-panel').classList.toggle('open')">
+          Ask AI Guide ✦
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       STATS BAR
+  ══════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">47+</div>
+      <div class="stat-label">Menu Items</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12K</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6AM</div>
+      <div class="stat-label">Open Daily</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MARQUEE / TICKER
+  ══════════════════════════════════════════ -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marquee">
+      <span class="marquee-item highlight">NASHVILLE HOT</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">COLD BREW</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">CRISPY WINGS</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">ESPRESSO</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">CHICKEN SANDWICH</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">POUR OVER</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">LOADED FRIES</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">LATTE ART</span><span class="marquee-dot">◆</span>
+      <!-- Duplicated for seamless infinite loop -->
+      <span class="marquee-item highlight">NASHVILLE HOT</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">COLD BREW</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">CRISPY WINGS</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">ESPRESSO</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">CHICKEN SANDWICH</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">POUR OVER</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item highlight">LOADED FRIES</span><span class="marquee-dot">◆</span>
+      <span class="marquee-item">LATTE ART</span><span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MENU SECTION
+  ══════════════════════════════════════════ -->
+  <section class="section" id="menu">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ What We Serve</span>
+      <h2 class="section-title">Our <span>Signature</span> Menu</h2>
+    </div>
+
+    <!-- Coffee Sub-heading -->
+    <div class="menu-subheading">
+      <span>— Coffee Selection —</span>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Card 1 -->
+      <div class="menu-card reveal reveal-delay-1">
+        <span class="card-emoji">☕</span>
+        <div class="card-body">
+          <div class="card-category">Signature Coffee</div>
+          <div class="card-name">The Midnight Espresso</div>
+          <div class="card-desc">Triple-shot dark roast with notes of dark chocolate and smoked caramel, pulled to perfection over 28 seconds.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 320</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+        <div class="card-badge">Fan Fave</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="menu-card reveal reveal-delay-2">
+        <span class="card-emoji">🥛</span>
+        <div class="card-body">
+          <div class="card-category">Signature Coffee</div>
+          <div class="card-name">Amber Latte</div>
+          <div class="card-desc">Our house espresso with steamed whole milk, brown sugar syrup and a dusting of cinnamon. Liquid gold.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 380</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="menu-card reveal reveal-delay-3">
+        <span class="card-emoji">🧊</span>
+        <div class="card-body">
+          <div class="card-category">Cold Brew</div>
+          <div class="card-name">24hr Cold Brew</div>
+          <div class="card-desc">Steeped 24 hours. Bold, smooth, never bitter. Served over hand-chipped ice with a salted cream float.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 450</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+        <div class="card-badge">New</div>
+      </div>
+    </div>
+
+    <!-- Fried Chicken Sub-heading -->
+    <div class="menu-subheading">
+      <span>— Fried Chicken —</span>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Card 4 -->
+      <div class="menu-card reveal reveal-delay-1">
+        <span class="card-emoji">🍗</span>
+        <div class="card-body">
+          <div class="card-category">Fried Chicken</div>
+          <div class="card-name">Nashville Hot Thighs</div>
+          <div class="card-desc">Bone-in thighs, double-dredged in seasoned flour, fried to shatter-crisp and hit with our signature Nashville cayenne paste.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 850</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+        <div class="card-badge">🔥 Spicy</div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="menu-card reveal reveal-delay-2">
+        <span class="card-emoji">🥪</span>
+        <div class="card-body">
+          <div class="card-category">Sandwiches</div>
+          <div class="card-name">The Crunch Classic</div>
+          <div class="card-desc">Crispy chicken fillet, house pickles, gold sauce and shredded slaw between a toasted brioche bun. Life-changing.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 920</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+        <div class="card-badge">Fan Fave</div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="menu-card reveal reveal-delay-3">
+        <span class="card-emoji">🍟</span>
+        <div class="card-body">
+          <div class="card-category">Sides</div>
+          <div class="card-name">Loaded Brew Fries</div>
+          <div class="card-desc">Thick-cut fries tossed in espresso salt, topped with cheddar sauce, crispy chicken bits and spring onion.</div>
+          <div class="card-footer">
+            <div class="card-price">KSH 620</div>
+            <button class="card-add">+</button>
+          </div>
+        </div>
+        <div class="card-badge">New</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-box-sm">Est. 2019 · Nairobi</div>
+        <div class="about-box-main">🍗☕</div>
+        <div class="about-box-accent">REAL FOOD<br>REAL BOLD</div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <h2>Two obsessions. <span style="color:var(--gold)">One kitchen.</span></h2>
+        <p>We started Crunch & Brew because we believed Nairobi deserved fried chicken that actually crackles, and coffee pulled by someone who gives a damn. Five years later, we're still hand-brining every bird and dialing in every espresso shot.</p>
+        <p>No shortcuts. No frozen chicken. No pre-ground beans. Just two things done obsessively well, served in a space that feels like yours.</p>
+        <div class="about-tags">
+          <span class="about-tag">Free-Range Chicken</span>
+          <span class="about-tag">Single Origin Coffee</span>
+          <span class="about-tag">Hand-Battered Daily</span>
+          <span class="about-tag">Direct Trade Beans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section class="testimonials" id="reviews">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ What People Say</span>
+      <h2 class="section-title">Heard on the <span>Streets</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The Nashville Hot is genuinely life-altering. I drove 40 minutes across Nairobi for this chicken. I'd do it again tomorrow."</p>
+        <div class="testimonial-author">— Amara K., Food Blogger</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Best cold brew in the city, no contest. They told me the beans are from Nyeri. The salted cream float is pure genius."</p>
+        <div class="testimonial-author">— David M., Coffee Enthusiast</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The Crunch Classic sandwich with the Amber Latte is the combo I didn't know I needed. Now it's the only lunch I want."</p>
+        <div class="testimonial-author">— Priya N., Regular Customer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">Crunch&Brew</span>
+        <p>Nairobi's home for legendary fried chicken and specialty coffee. Come hungry, leave obsessed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#">Coffee</a>
+        <a href="#">Fried Chicken</a>
+        <a href="#">Sandwiches</a>
+        <a href="#">Sides & Extras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <a href="#">Westlands, Nairobi</a>
+        <a href="#">Mon–Fri: 6am–10pm</a>
+        <a href="#">Sat–Sun: 7am–11pm</a>
+        <a href="#">+254 700 123 456</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Twitter/X</a>
+        <a href="#">Google Maps</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Crunch & Brew. All rights reserved.</p>
+      <p>Powered by real butter & real beans ✦</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       AI CHAT ASSISTANT
+  ══════════════════════════════════════════ -->
+  <button class="ai-fab" id="ai-fab" onclick="toggleChat()" title="Ask our AI Assistant">🤖</button>
+
+  <div class="chat-panel" id="chat-panel">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-info">
+        <h3>Brew Bot</h3>
+        <p>AI Menu Assistant</p>
+      </div>
+      <div class="chat-status">
+        <div class="status-dot"></div>
+        Online
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <div class="message bot">
+        <div class="message-bubble">Hey there! 👋 I'm Brew Bot, your personal guide to Crunch & Brew. Ask me anything — menu recommendations, allergens, pairings, or how to order. What can I get started for you?</div>
+        <div class="message-time">Just now</div>
+      </div>
+    </div>
+
+    <div class="quick-replies" id="quick-replies">
+      <button class="quick-reply" onclick="sendQuick('What\'s your most popular item?')">🏆 Most Popular</button>
+      <button class="quick-reply" onclick="sendQuick('What coffee do you recommend with the Nashville Hot?')">☕ Pairings</button>
+      <button class="quick-reply" onclick="sendQuick('Do you have vegetarian options?')">🥗 Vegetarian</button>
+      <button class="quick-reply" onclick="sendQuick('What are today\'s specials?')">✨ Specials</button>
+    </div>
+
+    <div class="chat-input-area">
+      <textarea
+        class="chat-input"
+        id="chat-input"
+        placeholder="Ask about our menu..."
+        rows="1"
+        onkeydown="handleKey(event)"
+      ></textarea>
+      <button class="chat-send" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
